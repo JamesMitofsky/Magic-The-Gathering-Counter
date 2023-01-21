@@ -31,7 +31,7 @@ export default function Main() {
       />
       <Counter
         counterDirection="decrement"
-        initialValue={40}
+        initialValue={21}
         resetRequired={resetRequired}
         label="Commander Life Counter"
       />
