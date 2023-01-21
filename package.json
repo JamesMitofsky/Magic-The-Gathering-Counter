@@ -1,7 +1,6 @@
 {
-  "name": "react-ts",
+  "name": "MTG-Counter",
   "version": "0.0.0",
-  "private": true,
   "dependencies": {
     "@babel/core": "^7.0.0",
     "@emotion/react": "^11.10.5",
