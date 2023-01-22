@@ -7,10 +7,7 @@ export default function Main() {
 
   // const titlesForDecrementing = ['Life Counter'];
 
-  const titlesForIncrementing = [
-    "Plainswalker Life Counter",
-    "Commander ReEntry Fee",
-  ];
+  const titlesForIncrementing = ["Plainswalker Life", "Commander ReEntry Fee"];
 
   function resetCounters() {
     setResetRequired(true);
@@ -27,13 +24,13 @@ export default function Main() {
         counterDirection="decrement"
         initialValue={40}
         resetRequired={resetRequired}
-        label="Life Counter"
+        label="Life"
       />
       <Counter
         counterDirection="decrement"
         initialValue={21}
         resetRequired={resetRequired}
-        label="Commander Life Counter"
+        label="Commander Life"
       />
       <Divider sx={{ mt: 2, mb: 2 }} />
       {titlesForIncrementing.map((currentLabel) => (
