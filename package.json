@@ -13,12 +13,14 @@
     "react-dom": "^18.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
   },
   "devDependencies": {
-    "react-scripts": "latest"
+    "@vitejs/plugin-react": "^3.0.1",
+    "react-scripts": "latest",
+    "vite": "^4.0.4",
+    "vite-tsconfig-paths": "^4.0.5"
   }
 }
