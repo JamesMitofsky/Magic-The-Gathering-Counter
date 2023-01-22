@@ -1,28 +1,28 @@
-import * as React from 'react';
-import { Box, Button, Divider } from '@mui/material';
-import Counter from './Counter';
+import { Box, Button, Divider } from "@mui/material";
+import Counter from "./Counter";
+import { useState, useEffect } from "react";
 
 export default function Main() {
-  const [resetRequired, setResetRequired] = React.useState(false);
+  const [resetRequired, setResetRequired] = useState(false);
 
   // const titlesForDecrementing = ['Life Counter'];
 
   const titlesForIncrementing = [
-    'Plainswalker Life Counter',
-    'Commander ReEntry Fee',
+    "Plainswalker Life Counter",
+    "Commander ReEntry Fee",
   ];
 
   function resetCounters() {
     setResetRequired(true);
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!resetRequired) return;
     setResetRequired(false);
   }, [resetRequired]);
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ display: "flex", flexDirection: "column" }}>
       <Counter
         counterDirection="decrement"
         initialValue={40}

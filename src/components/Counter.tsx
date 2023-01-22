@@ -1,26 +1,26 @@
-import * as React from 'react';
-import { Button, Typography, Box, TextField } from '@mui/material';
-import RemoveIcon from '@mui/icons-material/Remove';
-import AddIcon from '@mui/icons-material/Add';
+import { Button, Typography, Box, TextField } from "@mui/material";
+import RemoveIcon from "@mui/icons-material/Remove";
+import AddIcon from "@mui/icons-material/Add";
+import { useState, useEffect } from "react";
 
 interface Props {
   label: string;
   resetRequired: boolean;
-  counterDirection: 'increment' | 'decrement';
+  counterDirection: "increment" | "decrement";
   initialValue: number;
 }
 
 export default function Counter({ label, resetRequired, initialValue }: Props) {
-  const [counter, setCounter] = React.useState(initialValue);
+  const [counter, setCounter] = useState(initialValue);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!resetRequired) return;
     setCounter(initialValue);
   }, [resetRequired]);
 
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-      <Box sx={{ display: 'grid', gap: 2, gridAutoFlow: 'column' }}>
+    <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box sx={{ display: "grid", gap: 2, gridAutoFlow: "column" }}>
         <Button
           sx={{ pt: 2, pb: 2 }}
           onClick={() => setCounter((prev) => prev + 1)}
@@ -42,10 +42,10 @@ export default function Counter({ label, resetRequired, initialValue }: Props) {
           minWidth: 40,
         }}
         value={counter}
-        onChange={(event) => setCounter(event.target.value)}
+        onChange={(event) => setCounter(parseInt(event.target.value))}
         type="number"
       />
-      <Typography sx={{ width: '100%' }} variant="body1">
+      <Typography sx={{ width: "100%" }} variant="body1">
         {label}
       </Typography>
     </Box>

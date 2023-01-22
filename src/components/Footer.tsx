@@ -1,9 +1,8 @@
-import * as React from 'react';
-import { Box, Link } from '@mui/material';
+import { Box, Link } from "@mui/material";
 
 export default function Footer() {
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', p: 1 }}>
+    <Box sx={{ display: "flex", justifyContent: "center", p: 1 }}>
       <Link
         variant="body2"
         target="_blank"
